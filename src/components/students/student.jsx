@@ -5,17 +5,20 @@ import React from 'react'
 /*
 Los datos pasadoc como props los recibimos como un objeto
 en un parámetro de la función 
+
+
+desestructuracion: obtener las claves de un objeto, para hacer asignaciones menos complejas
 */
 
- const Student = (props) => {
-     console.log(props);
+ const Student = ({name, url, isGraduate}) => {
+     
   return (
     <>
     
-        <a href= {props.url} target='_blank'>
-            <h4>{props.name}</h4>
+        <a href= {url} target='_blank'>
+            <h4>{name}</h4>
         </a>
-        <p>Ex-alumno:{props.isGraduate ? ' Si' : ' No'}</p>
+        <p>Ex-alumno:{isGraduate ? ' Si' : ' No'}</p>
         
     
     </>
