@@ -10,15 +10,15 @@ en un parámetro de la función
 desestructuracion: obtener las claves de un objeto, para hacer asignaciones menos complejas
 */
 
- const Student = ({name, url, isGraduate}) => {
-     
+ const Student = ({info}) => {
+     console.log(info);
   return (
     <>
     
-        <a href= {url} target='_blank'>
-            <h4>{name}</h4>
+        <a href= {info.url} target='_blank'>
+            <h4>{info.name}</h4>
         </a>
-        <p>Ex-alumno:{isGraduate ? ' Si' : ' No'}</p>
+        <p>Ex-alumno:{info.isGraduate ? ' Si' : ' No'}</p>
         
     
     </>
