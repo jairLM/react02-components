@@ -1,5 +1,6 @@
 
 import './App.css';
+import CounterPague from './components/counter/counter-page';
 import Generation from './components/generation';
 import Greeting from './components/greeting';//importamos una funcion que se exporto como default
 import { NavBar, Footer } from './components/navBar/navBar';
@@ -9,10 +10,11 @@ function App() {
   return (
     <div className="App">      
       <NavBar/>
-      <Greeting />
+      <CounterPague/>
+      {/* <Greeting />
       <Parrafo /> 
       <Generation/>
-      <Footer/>
+      <Footer/> */}
     </div>
   );
 }
