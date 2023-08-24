@@ -8,7 +8,7 @@ import Parrafo from './components/parrafo';//importamos una funcion que se expor
 
 function App() {
   return (
-    <div className="App">      
+    <div>      
       <NavBar/>
       <CounterPague/>
       {/* <Greeting />

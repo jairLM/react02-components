@@ -3,11 +3,19 @@ import React, { useEffect } from 'react'
 const buttonStyle = {
     color:'red',
     fontFamily:'verdana',
-    fontSize:30
+    fontSize:18
+}
+//se puede llamar una hoja JSON -> obj
+//JSON styling
+
+const resetStytle = {
+    color:'blue',
+    fontFamily:'fantasy',
+    fontSize:24
 }
 
 
-export const MyButton = ( {onClick, children} ) => {
+export const MyButton = ( {onClick, children, className} ) => {
     console.log(`Esto dentro del componente button de ${children}`)
     /*
     El hook useEffect es utilizada para trabajar con efectos secundarios
@@ -30,7 +38,11 @@ export const MyButton = ( {onClick, children} ) => {
   return (
         
         <>
-            <button onClick={onClick} style={ buttonStyle }>{children}</button>
+            <div className={className}>
+                <button onClick={onClick} 
+                style={ children ==='Reset'? resetStytle: buttonStyle }>{children}</button>
+            </div>
+            
         </>
         
     

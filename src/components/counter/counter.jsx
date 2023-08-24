@@ -1,6 +1,11 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import { MyButton } from '../button/my-button'
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 let maxValue = 0;
 export const Counter = () => {
@@ -41,15 +46,23 @@ export const Counter = () => {
 
   return (
     <>
-    <p>Contador: {counterValue}</p>
-    <MyButton onClick={ handleDecrement } name="Decrementar">Decrementar</MyButton>
-    <MyButton onClick={ handleIncrement } name="Incrementar">Incrementar</MyButton>
-    <MyButton onClick={ (event) => { setCounter(100) } } name="reset">Reset</MyButton>
-    {/* <button onClick={ handleDecrement }>Decrementar</button>
-    <button onClick={ handleIncrement }>Incrementar</button>
-    <button onClick={ (event) => { setCounter(100) } }>Reset</button> */}
+    <p className='title'>Contador: {counterValue}</p>
+    <div className="button-container">
+      <ButtonGroup variant="outlined" aria-label="outlined button group" color='secondary'>
+        <Button onClick={ handleDecrement } size='large' startIcon={<RemoveCircleOutlineIcon />}>One</Button>
+        <Button onClick={ handleIncrement } size='large' startIcon={<AddCircleOutlineIcon />}>Two</Button>
+        <Button onClick={ (event) => { setCounter(100) } } size='large'endIcon={<RestartAltIcon />}>Three</Button>
+      </ButtonGroup>
+      {/* <MyButton className="button-increment" onClick={ handleDecrement }>Decrementar</MyButton>
+      <MyButton className="button-decrement" onClick={ handleIncrement }>Incrementar</MyButton>
+      <MyButton className="button-reset" onClick={ (event) => { setCounter(100) } }>Reset</MyButton> */}
+
+    </div>
     </>
   )
 }
+{/* <button onClick={ handleDecrement }>Decrementar</button>
+<button onClick={ handleIncrement }>Incrementar</button>
+<button onClick={ (event) => { setCounter(100) } }>Reset</button> */}
 
 
