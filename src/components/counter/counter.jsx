@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
+import { MyButton } from '../button/my-button'
 
 export const Counter = () => {
 
@@ -35,9 +36,12 @@ export const Counter = () => {
   return (
     <>
     <p>Contador: {counterValue}</p>
-    <button onClick={ handleDecrement }>Decrementar</button>
+    <MyButton onClick={ handleDecrement } name="Decrementar">Decrementar</MyButton>
+    <MyButton onClick={ handleIncrement } name="Incrementar">Incrementar</MyButton>
+    <MyButton onClick={ (event) => { setCounter(100) } } name="reset">Reset</MyButton>
+    {/* <button onClick={ handleDecrement }>Decrementar</button>
     <button onClick={ handleIncrement }>Incrementar</button>
-    <button onClick={ (event) => { setCounter(100) } }>Reset</button>
+    <button onClick={ (event) => { setCounter(100) } }>Reset</button> */}
     </>
   )
 }
