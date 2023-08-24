@@ -1,5 +1,12 @@
 import React, { useEffect } from 'react'
 
+const buttonStyle = {
+    color:'red',
+    fontFamily:'verdana',
+    fontSize:30
+}
+
+
 export const MyButton = ( {onClick, children} ) => {
     console.log(`Esto dentro del componente button de ${children}`)
     /*
@@ -23,7 +30,7 @@ export const MyButton = ( {onClick, children} ) => {
   return (
         
         <>
-            <button onClick={onClick} style={ {color:'red', fontFamily:'verdana', fontSize:30} }>{children}</button>
+            <button onClick={onClick} style={ buttonStyle }>{children}</button>
         </>
         
     
